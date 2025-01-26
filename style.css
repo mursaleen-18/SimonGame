@@ -1,4 +1,4 @@
-body{
+/* body{
     text-align: center;
 }
 
@@ -37,4 +37,93 @@ body{
 }
 .userFlash{
     background-color: white;
+} */
+
+/* ================================== */
+
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px; /* Increased gap between boxes */
+    justify-content: center; /* Center the grid within the container */
+}
+
+.btn {
+    height: 150px;
+    width: 150px;
+    border: none;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    justify-content: center; /* Center the numbers horizontally */
+    align-items: center; /* Center the numbers vertically */
+    font-size: 2rem; /* Adjust font size for better visibility */
+    color: #000000; /* White color for numbers */
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.red {
+    background-color: #ff4c4c;
+}
+
+.green {
+    background-color: #4cff4c;
+}
+
+.yellow {
+    background-color: #ffff4c;
+}
+
+.blue {
+    background-color: #4c4cff;
+}
+
+.flash {
+    animation: flash 0.25s;
+}
+
+.userFlash {
+    animation: userFlash 0.25s;
+}
+
+@keyframes flash {
+    0% { background-color: white; }
+    100% { background-color: inherit; }
+}
+
+@keyframes userFlash {
+    0% { background-color: black; }
+    100% { background-color: inherit; }
 }
